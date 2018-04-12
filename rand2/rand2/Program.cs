@@ -11,7 +11,7 @@ namespace rand2
         static void Main(string[] args)
         {
             Random rand = new Random();// 宣告變數
-            for (int i = 0; i < 7;i++ ) 
+            for (int i = 0; i < 5;i++ ) 
             {
                 int r0 = rand.Next(1, 43);
                 int r1 = rand.Next(1, 43);
@@ -21,6 +21,20 @@ namespace rand2
 
                 Console.WriteLine("{0:00}{1:00}{2:00}{3:00}{4:00}",r0,r1,r2,r3,r4);// 亂數範圍為1到43，但可能會重複
             }
+          
+            // 樂透機
+
+            // 步驟一 將所有號碼放入List中
+            List<int> numbers = new List<int>();
+            for(int i =1 ; i <= 42 ; i++)
+            {
+                numbers.Add(i);
+            }
+
+            // 步驟二 隨機挑選一個數值並印出
+            Random rand1 = new Random();
+          
+
             Console.ReadKey();// 停止畫面
         }
     }
