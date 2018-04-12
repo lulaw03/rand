@@ -10,6 +10,12 @@ namespace rand2
     {
         static void Main(string[] args)
         {
+            Random rand = new Random();// 宣告變數
+            for (int i = 0; i < 6;i++ ) 
+            {
+                Console.WriteLine(rand.Next(1, 43));// 亂數範圍為1到43，但可能會重複
+            }
+            Console.ReadKey();// 停止畫面
         }
     }
 }
