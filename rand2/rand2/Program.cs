@@ -33,9 +33,19 @@ namespace rand2
 
             // 步驟二 隨機挑選一個數值並印出
             Random rand1 = new Random();
-          
+            for (int h = 1; h <= 6; h++ )
+            {
+                int r = rand.Next(1, 43);
+                Console.WriteLine(numbers[r]);
+            // 步湊三將其數從List屏除
+                numbers.RemoveAt(r);
+            }
+            // 步湊四 重複六次步湊2.3.
+            
 
-            Console.ReadKey();// 停止畫面
+
+            // 停止畫面
+            Console.ReadKey();
         }
     }
 }
